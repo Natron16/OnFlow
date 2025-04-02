@@ -1,32 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nate\\Desktop\\C# Projects\\OnFlow\\MyApplication\\MyApplication.csproj": {}
+    "c:\\Users\\Nate\\Desktop\\C# Projects\\Hack-Attack-main\\OnFlow\\MyApplication\\MyApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nate\\Desktop\\C# Projects\\OnFlow\\MyApplication\\MyApplication.csproj": {
+    "c:\\Users\\Nate\\Desktop\\C# Projects\\Hack-Attack-main\\OnFlow\\MyApplication\\MyApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nate\\Desktop\\C# Projects\\OnFlow\\MyApplication\\MyApplication.csproj",
+        "projectUniqueName": "c:\\Users\\Nate\\Desktop\\C# Projects\\Hack-Attack-main\\OnFlow\\MyApplication\\MyApplication.csproj",
         "projectName": "MyApplication",
-        "projectPath": "C:\\Users\\Nate\\Desktop\\C# Projects\\OnFlow\\MyApplication\\MyApplication.csproj",
+        "projectPath": "c:\\Users\\Nate\\Desktop\\C# Projects\\Hack-Attack-main\\OnFlow\\MyApplication\\MyApplication.csproj",
         "packagesPath": "C:\\Users\\Nate\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nate\\Desktop\\C# Projects\\OnFlow\\MyApplication\\obj\\",
+        "outputPath": "c:\\Users\\Nate\\Desktop\\C# Projects\\Hack-Attack-main\\OnFlow\\MyApplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nate\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net9.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net9.0": {
-            "targetAlias": "net9.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -43,8 +43,8 @@
         "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
-        "net9.0": {
-          "targetAlias": "net9.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "MudBlazor": {
               "target": "Package",
@@ -62,6 +62,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.13, 8.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"

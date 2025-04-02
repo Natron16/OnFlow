@@ -26,7 +26,7 @@ app.UseHttpsRedirection();
 
 app.UseAntiforgery();
 
-app.MapStaticAssets();
+//app.MapStaticAssets(); .NET 9.0 to 8.0
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
