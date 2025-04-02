@@ -1,0 +1,49 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+@inject FileService FileService
+
+<h3>CSV Data</h3>
+
+@if (FileService.CsvRows.Any())
+{
+    <MudSimpleTable Hover="true" Dense="true" FixedHeader="@fixedheader" Style="@(fixedheader ? "height:300px;" : "")">
+        <thead>
+            <tr>
+                @foreach (var header in FileService.CsvHeaders)
+                {
+                    <th>@header</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var row in FileService.CsvRows)
+            {
+                <tr>
+                    @foreach (var cell in row)
+                    {
+                        <td>@cell</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </MudSimpleTable>
+
+    <MudSwitch @bind-Value="fixedheader" Color="Color.Primary">Fixed Header</MudSwitch>
+}
+
+else
+{
+    <MudText>No CSV Data Available</MudText>
+}
+
+@code 
+{
+    private bool fixedheader = false;
+    protected override async Task OnInitializedAsync()
+    {
+        if (FileService.UploadedFiles.Any())
+        {
+            await FileService.ReadCsvFile(FileService.UploadedFiles.Last());
+        }
+    }
+}

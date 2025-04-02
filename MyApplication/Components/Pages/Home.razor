@@ -1,0 +1,28 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+@inject FileService FileService
+@inject NavigationManager Navigation
+
+<h3>File Upload</h3>
+<InputFile OnChange="FileUploaded" />
+
+@if (FileService.UploadedFiles.Count > 0)
+{
+    <h2>Uploaded Files</h2>
+    <ul>
+        @foreach (var file in FileService.UploadedFiles)
+        {
+            <li>@file.FileName (@file.FileSize bytes)</li>
+        }
+    </ul>
+}
+
+@code {
+    private async Task FileUploaded(InputFileChangeEventArgs e)
+    {
+        var file = e.File;
+        await FileService.StoreFile(file);
+        Navigation.NavigateTo("/counter"); // Redirect to counter page
+    }
+}
